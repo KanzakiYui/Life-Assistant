@@ -32,6 +32,7 @@
         // JS
         "array-bracket-spacing":                ["warn", "always"],
         "array-callback-return":                ["warn", { "allowImplicit": true }],
+        "array-element-newline":                ["warn", "never"],   
         "arrow-spacing":                        "warn",
         "block-spacing":                        "warn",             
         "block-scoped-var":                     "warn",
