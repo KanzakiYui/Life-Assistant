@@ -1,3 +1,5 @@
+@import 'variables/color';
+
 html {
     height: 100%;
     line-height: 1.5;
@@ -16,4 +18,9 @@ html {
     &:focus {
         outline: none;
     }
+}
+
+::selection {
+    background-color: $color-cyan-light;
+    color: $color-white-light;
 }
