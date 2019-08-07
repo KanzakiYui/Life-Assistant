@@ -1,16 +1,19 @@
 {
-    "name": "api-documentation",
+    "name": "life-assistant",
     "author": "Kanzaki_Yui",
     "version": "0.0.1",
-    "description": "this is the API documentation",
+    "description": "An useful web application to make your life easier",
     "keyword": [
-        "API",
-        "Documentation"
+        "react",
+        "web",
+        "app",
+        "life",
+        "assistant"
     ],
     "license": "MIT",
-    "homepage": "https://github.com/KanzakiYui/API_Documentation#readme",
+    "homepage": "https://github.com/KanzakiYui/Life-Assistant#readme",
     "bugs": {
-        "url": "https://github.com/KanzakiYui/API_Documentation/issues"
+        "url": "https://github.com/KanzakiYui/Life-Assistant/issues"
     },
     "scripts": {
         "server": "webpack-dev-server --open --config=./compile/index.js",
@@ -20,12 +23,8 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/KanzakiYui/API_Documentation.git"
+        "url": "git+https://github.com/KanzakiYui/Life-Assistant.git"
     },
-    "keywords": [
-        "API",
-        "Documentation"
-    ],
     "devDependencies": {
         "@babel/core": "^7.5.5",
         "@babel/preset-env": "^7.5.5",
