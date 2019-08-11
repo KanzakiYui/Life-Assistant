@@ -16,16 +16,29 @@ const MUIThemeTester = () => {
             spacing={4}
         >
             <Grid item xs={4}>
-                <Button>Hello World</Button>
+                <Button>Primary Contained</Button>
             </Grid>
             <Grid item xs={4}>
-                <Button>Welcome</Button>
+                <Button color='secondary'>Secondary Contained</Button>
             </Grid>
             <Grid item xs={4}>
-                <Button>Ok</Button>
+                <Button color='error'>Error Contained</Button>
             </Grid>
             <Grid item xs={4}>
-                <Button>Test</Button>
+                <Button outlined>Primary Outlined</Button>
+            </Grid>
+            <Grid item xs={4}>
+                <Button outlined color='secondary'>
+                    Secondary Outlined
+                </Button>
+            </Grid>
+            <Grid item xs={4}>
+                <Button outlined color='error'>
+                    Error Outlined
+                </Button>
+            </Grid>
+            <Grid item xs={4}>
+                <Button disabled>Test</Button>
             </Grid>
         </Box>
     )

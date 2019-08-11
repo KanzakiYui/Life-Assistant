@@ -22,8 +22,8 @@ const palette = {
         light: 'rgb(132, 255, 230)'
     },
     error: {
-        dark: 'rgb(195, 0, 0)',
-        main: 'rgb(232, 21, 93)',
+        dark: 'rgb(150, 0, 0)',
+        main: 'rgb(200, 0, 0)',
         light: 'rgb(255, 0, 0)'
     }
 }
