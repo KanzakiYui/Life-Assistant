@@ -1,7 +1,7 @@
 import React from 'react'
-import { Grid, Box } from '@material-ui/core'
+import { Grid, Box, Typography } from '@material-ui/core'
 
-import { Link, Tooltip } from 'mui/components'
+import { Link, Tooltip, Button } from 'mui/components'
 
 const MUIThemeTester = () => {
     return (
@@ -13,10 +13,24 @@ const MUIThemeTester = () => {
             alignItems='center'
             justify='center'
             wrap='wrap'
-            spacing={4}
         >
             <Grid item xs={3}>
-                <Tooltip>
+                <Tooltip pos='bottom' title='This is a plain text tooltip'>
+                    <Link color='primary'>Primary Link</Link>
+                </Tooltip>
+            </Grid>
+            <Grid item xs={3}>
+                <Tooltip
+                    pos='top'
+                    title={
+                        <React.Fragment>
+                            <Typography>
+                                This is a html tooltip with button
+                            </Typography>
+                            <Button color='error'>Error Button</Button>
+                        </React.Fragment>
+                    }
+                >
                     <Link color='secondary'>Default Link</Link>
                 </Tooltip>
             </Grid>
