@@ -1,34 +1,54 @@
 import React from 'react'
 import { Grid, Box } from '@material-ui/core'
-import { baseSpacing, baseHTMLFontSize, scaler } from 'mui/theme/constants'
+
+import { Button } from 'mui/components'
 
 const MUIThemeTester = () => {
     return (
-        <Grid container spacing={1} alignItems='center' justify='center'>
-            <Box
-                component={Grid}
-                item
-                xs={12}
-                md={6}
-                lg={4}
-                color='primary.light'
-            >
-                Current Spacing: {baseSpacing * scaler}
-            </Box>
-            <Box
-                component={Grid}
-                item
-                xs={12}
-                md={6}
-                lg={4}
-                color='secondary.dark'
-            >
-                Current Font Size: {baseHTMLFontSize * scaler}
-            </Box>
-            <Box component={Grid} item xs={12} md={6} lg={4} color='error.main'>
-                Scaler: {scaler}
-            </Box>
-        </Grid>
+        <Box
+            component={Grid}
+            py={2}
+            px={4}
+            container
+            alignItems='center'
+            justify='center'
+            wrap='wrap'
+            spacing={4}
+        >
+            <Grid item xs={3}>
+                <Button>Default Contained</Button>
+            </Grid>
+            <Grid item xs={3}>
+                <Button color='primary'>Primary Contained</Button>
+            </Grid>
+            <Grid item xs={3}>
+                <Button color='secondary'>Secondary Contained</Button>
+            </Grid>
+            <Grid item xs={3}>
+                <Button color='error'>Error Contained</Button>
+            </Grid>
+            <Grid item xs={3}>
+                <Button outlined>Default Outlined</Button>
+            </Grid>
+            <Grid item xs={3}>
+                <Button outlined color='primary'>
+                    Primary Outlined
+                </Button>
+            </Grid>
+            <Grid item xs={3}>
+                <Button outlined color='secondary'>
+                    Secondary Outlined
+                </Button>
+            </Grid>
+            <Grid item xs={3}>
+                <Button outlined color='error'>
+                    Error Outlined
+                </Button>
+            </Grid>
+            <Grid item xs={3}>
+                <Button disabled>Disabled</Button>
+            </Grid>
+        </Box>
     )
 }
 
