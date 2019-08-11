@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, Box } from '@material-ui/core'
 
-import { Link } from 'mui/components'
+import { Button } from 'mui/components'
 
 const MUIThemeTester = () => {
     return (
@@ -13,19 +13,18 @@ const MUIThemeTester = () => {
             alignItems='center'
             justify='center'
             wrap='wrap'
-            spacing={4}
         >
             <Grid item xs={3}>
-                <Link href='https://www.google.ca'>Default Link</Link>
+                <Button>Default Button</Button>
             </Grid>
             <Grid item xs={3}>
-                <Link color='primary'>Primary Link</Link>
+                <Button scale='sm'>Small Button</Button>
             </Grid>
             <Grid item xs={3}>
-                <Link color='secondary'>Secondary Link</Link>
+                <Button scale='lg'>Large Button</Button>
             </Grid>
             <Grid item xs={3}>
-                <Link color='error'>Error Link</Link>
+                <Button scale={0.5}>Arbitrary Sized Button</Button>
             </Grid>
         </Box>
     )
