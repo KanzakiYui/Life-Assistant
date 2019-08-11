@@ -13,7 +13,7 @@ const defaultButtonStyles = makeStyles(theme => ({
         '&>*:first-child': {
             color: ({ color }) =>
                 color === 'error'
-                    ? theme.palette.common.whiteLight
+                    ? theme.palette.default.light
                     : theme.palette.common.dark
         },
         '&:hover': {
@@ -37,7 +37,7 @@ const defaultButtonStyles = makeStyles(theme => ({
         'backgroundColor': `${theme.palette.grey[700]} !important`,
         'pointerEvents': 'auto !important',
         'boxShadow': '0px 0px 0px 0px transparent',
-        'color': `${theme.palette.common.whiteDark} !important`,
+        'color': `${theme.palette.default.dark} !important`,
         '&:hover': {
             cursor: 'not-allowed',
             boxShadow: '0px 0px 0px 0px transparent !important'
@@ -46,7 +46,7 @@ const defaultButtonStyles = makeStyles(theme => ({
 }))
 
 const Button = ({ outlined, color: color, ...others }) => {
-    const ButtonColor = color || 'primary'
+    const ButtonColor = color || 'default'
     const classes = defaultButtonStyles({ color: ButtonColor })
     const variant = outlined ? 'outlined' : 'contained'
     return <MuiButton classes={classes} variant={variant} {...others} />

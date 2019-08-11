@@ -4,9 +4,6 @@ const palette = {
         blackDark: 'rgb(0, 0, 0)',
         black: 'rgb(45, 45, 45)',
         blackLight: 'rgb(74, 74, 74)',
-        whiteDark: 'rgb(195, 195, 195)',
-        white: 'rgb(225, 225, 225)',
-        whiteLight: 'rgb(255, 255, 255)',
         blueDark: 'rgb(17, 42, 149)',
         blue: 'rgb(21, 61, 232)',
         blueLight: 'rgb(90, 177, 252)'
@@ -25,6 +22,11 @@ const palette = {
         dark: 'rgb(150, 0, 0)',
         main: 'rgb(200, 0, 0)',
         light: 'rgb(255, 0, 0)'
+    },
+    default: {
+        dark: 'rgb(195, 195, 195)',
+        main: 'rgb(225, 225, 225)',
+        light: 'rgb(255, 255, 255)'
     }
 }
 

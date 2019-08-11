@@ -15,30 +15,38 @@ const MUIThemeTester = () => {
             wrap='wrap'
             spacing={4}
         >
-            <Grid item xs={4}>
-                <Button>Primary Contained</Button>
+            <Grid item xs={3}>
+                <Button>Default Contained</Button>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={3}>
+                <Button color='primary'>Primary Contained</Button>
+            </Grid>
+            <Grid item xs={3}>
                 <Button color='secondary'>Secondary Contained</Button>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={3}>
                 <Button color='error'>Error Contained</Button>
             </Grid>
-            <Grid item xs={4}>
-                <Button outlined>Primary Outlined</Button>
+            <Grid item xs={3}>
+                <Button outlined>Default Outlined</Button>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={3}>
+                <Button outlined color='primary'>
+                    Primary Outlined
+                </Button>
+            </Grid>
+            <Grid item xs={3}>
                 <Button outlined color='secondary'>
                     Secondary Outlined
                 </Button>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={3}>
                 <Button outlined color='error'>
                     Error Outlined
                 </Button>
             </Grid>
-            <Grid item xs={4}>
-                <Button disabled>Test</Button>
+            <Grid item xs={3}>
+                <Button disabled>Disabled</Button>
             </Grid>
         </Box>
     )
