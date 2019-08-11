@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, Box } from '@material-ui/core'
 
-import { Button } from 'mui/components'
+import { Link } from 'mui/components'
 
 const MUIThemeTester = () => {
     return (
@@ -16,37 +16,16 @@ const MUIThemeTester = () => {
             spacing={4}
         >
             <Grid item xs={3}>
-                <Button>Default Contained</Button>
+                <Link href='https://www.google.ca'>Default Link</Link>
             </Grid>
             <Grid item xs={3}>
-                <Button color='primary'>Primary Contained</Button>
+                <Link color='primary'>Primary Link</Link>
             </Grid>
             <Grid item xs={3}>
-                <Button color='secondary'>Secondary Contained</Button>
+                <Link color='secondary'>Secondary Link</Link>
             </Grid>
             <Grid item xs={3}>
-                <Button color='error'>Error Contained</Button>
-            </Grid>
-            <Grid item xs={3}>
-                <Button outlined>Default Outlined</Button>
-            </Grid>
-            <Grid item xs={3}>
-                <Button outlined color='primary'>
-                    Primary Outlined
-                </Button>
-            </Grid>
-            <Grid item xs={3}>
-                <Button outlined color='secondary'>
-                    Secondary Outlined
-                </Button>
-            </Grid>
-            <Grid item xs={3}>
-                <Button outlined color='error'>
-                    Error Outlined
-                </Button>
-            </Grid>
-            <Grid item xs={3}>
-                <Button disabled>Disabled</Button>
+                <Link color='error'>Error Link</Link>
             </Grid>
         </Box>
     )

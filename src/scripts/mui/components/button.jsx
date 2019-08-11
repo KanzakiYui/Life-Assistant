@@ -3,7 +3,7 @@ import PropType from 'prop-types'
 import { Button as MuiButton } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 
-const defaultButtonStyles = makeStyles(theme => ({
+const useStyles = makeStyles(theme => ({
     root: {
         'backgroundColor': ({ color }) => theme.palette[color].main,
         'padding': `${theme.spacing(0.5)}px ${theme.spacing(4)}px`,
@@ -47,7 +47,7 @@ const defaultButtonStyles = makeStyles(theme => ({
 
 const Button = ({ outlined, color: color, ...others }) => {
     const ButtonColor = color || 'default'
-    const classes = defaultButtonStyles({ color: ButtonColor })
+    const classes = useStyles({ color: ButtonColor })
     const variant = outlined ? 'outlined' : 'contained'
     return <MuiButton classes={classes} variant={variant} {...others} />
 }
