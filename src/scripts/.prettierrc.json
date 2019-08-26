@@ -1,7 +1,8 @@
 {
-    "tabWidth":                 4,
-    "semi":                     false,
-    "singleQuote":              true,
-    "quoteProps":               "consistent",
-    "jsxSingleQuote":           true
+    "printWidth":                       100,
+    "tabWidth":                         4,
+    "semi":                             false,
+    "singleQuote":                      true,
+    "quoteProps":                       "consistent",
+    "jsxSingleQuote":                   true
 }
