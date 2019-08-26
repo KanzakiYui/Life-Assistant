@@ -5,14 +5,7 @@ on: [push, pull_request]        #https://help.github.com/en/articles/events-that
 jobs:
   install:
     name: Install Check
-    runs-on: ubuntu-latest     #https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idruns-on
+    runs-on: ubuntu-latest      #https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idruns-on
     steps:
     - name: Install Dependencies
-      run: yarn
-  prettier:
-    name: Prettier Check
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-    - name: Run Prettier Check
-      run: ls
+      run: find / d -iname 'Life-Assistant'
