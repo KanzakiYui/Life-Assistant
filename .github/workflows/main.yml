@@ -9,8 +9,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install Dependencies
-      run: yarn
-      run: ls
+    - run: yarn
+    - run: ls
   # prettier:
   #   name: Prettier Check
   #   needs: install
