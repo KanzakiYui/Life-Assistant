@@ -15,4 +15,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Run Prettier Check
-      run: node do format
+      run: ls
