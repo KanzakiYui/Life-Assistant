@@ -19,13 +19,7 @@ const Link = ({ color, ...others }) => {
     const linkColor = color || 'default'
     const classes = useStyles({ color: linkColor })
     return (
-        <MuiLink
-            target='_blank'
-            rel='noopener'
-            underline='always'
-            classes={classes}
-            {...others}
-        />
+        <MuiLink target='_blank' rel='noopener' underline='always' classes={classes} {...others} />
     )
 }
 

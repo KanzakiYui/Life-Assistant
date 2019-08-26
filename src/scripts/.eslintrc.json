@@ -31,7 +31,6 @@
     ],
     "rules": {
         // JS
-        "array-bracket-spacing":                ["warn", "always"],
         "array-callback-return":                ["warn", { "allowImplicit": true }],
         "arrow-spacing":                        "warn",
         "block-spacing":                        "warn",
@@ -43,7 +42,6 @@
         "linebreak-style":                      ["warn", "windows"],
         "no-console":                           "warn",
         "no-duplicate-imports":                 "warn",
-        "no-extra-parens":                      "warn",
         "no-floating-decimal":                  "warn",
         "no-lonely-if":                         "warn",
         "no-multi-assign":                      "warn",
