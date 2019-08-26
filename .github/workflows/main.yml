@@ -15,7 +15,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Run Prettier Check
-      run: .\node_modules\.bin\prettier --write "src/**/*.{js,jsx}"
+      run: ./node_modules/.bin/prettier --check "src/**/*.{js,jsx}"
  eslint:
     name: Eslint Check
     needs: [install, prettier]
