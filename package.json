@@ -55,9 +55,8 @@
         "react-dom": "^16.8.6"
     },
     "lint-staged": {
-        "src/scripts/**/*.{js,jsx}": [
+        "src/**/*.{js,jsx}": [
             "prettier --write",
-            "eslint --fix",
             "git add"
         ]
     },
