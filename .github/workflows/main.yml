@@ -10,9 +10,12 @@ jobs:
     - uses: actions/checkout@master
       with:
         ref: ${{ github.ref }}
-    # - name: Install Dependencies
-    - run: yarn
-    - run: ls
+    - name: Install Dependencies
+      run: yarn
+    - name: Run Prettier Check
+      run: .\node_modules\.bin\prettier --check src/**/*.{js,jsx}
+    - name: Run Eslint Check
+      run: .\node_modules\.bin\eslint src/scripts/**/*.{js,jsx}
   # prettier:
   #   name: Prettier Check
   #   needs: install
