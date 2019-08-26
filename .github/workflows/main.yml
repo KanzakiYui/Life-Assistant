@@ -15,4 +15,4 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Run Prettier Check
-      run: cd ../ && node do format
+      run: cd src && dir /s /ad
