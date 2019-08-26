@@ -30,7 +30,7 @@
         "react"
     ],
     "rules": {
-        // JS
+        // JavaScript
         "array-callback-return":                ["warn", { "allowImplicit": true }],
         "arrow-spacing":                        "warn",
         "block-spacing":                        "warn",
