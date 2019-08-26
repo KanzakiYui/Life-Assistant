@@ -12,23 +12,23 @@ jobs:
         ref: ${{ github.ref }}
     - name: Install Dependencies
       run: yarn
-    - name: Run Prettier Check
+  prettier:
+    name: Prettier Check
+    needs: install
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        ref: ${{ github.ref }}
+    - name: Run Prettier to Check Code Format
       run: .\node_modules\.bin\prettier --check src/**/*.{js,jsx}
-    - name: Run Eslint Check
+  eslint:
+    name: Eslint Check
+    needs: [install, prettier]
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        ref: ${{ github.ref }}
+    - name: Run Eslint to Check Lint Issues
       run: .\node_modules\.bin\eslint src/scripts/**/*.{js,jsx}
-  # prettier:
-  #   name: Prettier Check
-  #   needs: install
-  #   runs-on: windows-latest
-  #   steps:
-  #   - uses: actions/checkout@v1
-  #   - name: Run Prettier Check
-  #     run: .\node_modules\.bin\prettier --check src/**/*.{js,jsx}
-  # eslint:
-  #   name: Eslint Check
-  #   needs: [install, prettier]
-  #   runs-on: windows-latest
-  #   steps:
-  #   - uses: actions/checkout@v1
-  #   - name: Run Eslint Check
-  #     run: .\node_modules\.bin\eslint src/scripts/**/*.{js,jsx}
