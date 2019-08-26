@@ -7,8 +7,10 @@ jobs:
     name: Install Check
     runs-on: windows-latest     #https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idruns-on
     steps:
-    - uses: actions/checkout@v1
-    - name: Install Dependencies
+    - uses: actions/checkout@master
+      with:
+        ref: ${{ github.ref }}
+    # - name: Install Dependencies
     - run: yarn
     - run: ls
   # prettier:
