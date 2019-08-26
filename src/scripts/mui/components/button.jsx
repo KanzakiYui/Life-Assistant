@@ -52,8 +52,8 @@ const Button = ({ outlined, color: color, scale, ...others }) => {
         ? scale === 'sm'
             ? 0.75
             : scale === 'lg'
-                ? 1.25
-                : scale
+            ? 1.25
+            : scale
         : 1
     const classes = useStyles({ color: ButtonColor, size })
     const variant = outlined ? 'outlined' : 'contained'
@@ -61,7 +61,7 @@ const Button = ({ outlined, color: color, scale, ...others }) => {
 }
 
 Button.propTypes = {
-    scale: PropType.oneOfType([ PropType.string, PropType.number ]),
+    scale: PropType.oneOfType([PropType.string, PropType.number]),
     outlined: PropType.bool,
     color: PropType.string
 }
