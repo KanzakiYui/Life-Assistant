@@ -1,9 +1,9 @@
 name: Best Practice Check
 
-on: [push, pull_request]        #https://help.github.com/en/articles/events-that-trigger-workflows
+on: [push]        #https://help.github.com/en/articles/events-that-trigger-workflows
 
 jobs:
-  install:
+  default:
     name: Install Check
     runs-on: windows-latest     #https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idruns-on
     steps:
@@ -12,23 +12,7 @@ jobs:
         ref: ${{ github.ref }}
     - name: Install Dependencies
       run: yarn
-  prettier:
-    name: Prettier Check
-    needs: install
-    runs-on: windows-latest
-    steps:
-    - uses: actions/checkout@master
-      with:
-        ref: ${{ github.ref }}
     - name: Run Prettier to Check Code Format
       run: .\node_modules\.bin\prettier --check src/**/*.{js,jsx}
-  eslint:
-    name: Eslint Check
-    needs: [install, prettier]
-    runs-on: windows-latest
-    steps:
-    - uses: actions/checkout@master
-      with:
-        ref: ${{ github.ref }}
     - name: Run Eslint to Check Lint Issues
       run: .\node_modules\.bin\eslint src/scripts/**/*.{js,jsx}
