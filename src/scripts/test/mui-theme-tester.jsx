@@ -52,12 +52,20 @@ const MUIThemeTester = () => {
             </Section>
             <Section mt={16}>
                 <Grid item xs={4}>
-                    <Tooltip pos='top' title='tooltip on TOP'>
+                    <Tooltip
+                        pos='top'
+                        title='tooltip on TOP with centered text'
+                        tooltipTextAlign='center'
+                    >
                         <Link color='primary'>Example 04</Link>
                     </Tooltip>
                 </Grid>
                 <Grid item xs={4}>
-                    <Tooltip pos='left' title='tooltip on LEFT'>
+                    <Tooltip
+                        pos='left'
+                        title='tooltip on LEFT but aligned right'
+                        tooltipTextAlign='right'
+                    >
                         <Link color='primary'>Example 05</Link>
                     </Tooltip>
                 </Grid>

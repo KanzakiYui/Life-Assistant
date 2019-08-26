@@ -72,7 +72,14 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-const Tooltip = ({ pos = 'bottom', title, width, children, ...others }) => {
+const Tooltip = ({
+    pos = 'bottom',
+    title,
+    width,
+    children,
+    tooltipTextAlign,
+    ...others
+}) => {
     const [ isVisible, setVisibility ] = useState(false)
     const elementRef = useRef(null)
     const tooltipRef = useRef(null)
@@ -88,8 +95,8 @@ const Tooltip = ({ pos = 'bottom', title, width, children, ...others }) => {
             bgcolor='default.main'
             color='common.black'
             borderRadius='borderRadius'
-            minWidth={1}
-            width={width || 'auto'}
+            minWidth={width || 200 * scaler}
+            textAlign={tooltipTextAlign}
         >
             {title}
         </Box>
@@ -111,14 +118,24 @@ const Tooltip = ({ pos = 'bottom', title, width, children, ...others }) => {
             tooltipEle.style.top = `-${offset}px`
         }
     }
+    const onMouseMove = event => {
+        const arrow = tooltipRef.current
+        if (!arrow) return
+        const arrowRect = arrow.getBoundingClientRect()
+        if (pos === 'bottom' || pos === 'top')
+            arrow.style.left = event.offsetX - arrowRect.width / 2 + 'px'
+        else arrow.style.top = event.offsetY - arrowRect.height / 2 + 'px'
+    }
     const onMouseLeave = () => setVisibility(false)
 
     useEffect(() => {
         targetElement = elementRef.current.querySelector('*')
         targetElement.addEventListener('mouseenter', onMouseEnter)
+        targetElement.addEventListener('mousemove', onMouseMove)
         targetElement.addEventListener('mouseleave', onMouseLeave)
         return () => {
             targetElement.removeEventListener('mouseenter', onMouseEnter)
+            targetElement.removeEventListener('mousemove', onMouseLeave)
             targetElement.removeEventListener('mouseleave', onMouseLeave)
         }
     }, [])
@@ -144,7 +161,8 @@ Tooltip.propTypes = {
         PropType.node
     ]),
     children: PropType.any,
-    width: PropType.number
+    width: PropType.number,
+    tooltipTextAlign: PropType.string
 }
 
 export default Tooltip
