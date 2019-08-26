@@ -5,16 +5,8 @@ on: [push, pull_request]        #https://help.github.com/en/articles/events-that
 jobs:
   install:
     name: Install Check
-    runs-on: ubuntu-latest      #https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idruns-on
+    runs-on: ubuntu-latest     #https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idruns-on
     steps:
+    - uses: actions/checkout@v1 
     - name: Install Dependencies
-      runs-on: ubuntu-latest
-      steps:
-      - uses: actions/checkout@v1
-      # This step uses the hello-world-action stored in this workflow's repository.
-      - uses: ./hello-world-action
-        with:
-          who-to-greet: 'Octocat'
-        id: hello
-      # This step prints the time.
-      - run: echo "The time was ${{ steps.hello.outputs.time }}"
+      run: yarn
