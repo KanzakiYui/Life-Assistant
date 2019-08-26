@@ -24,7 +24,5 @@ export const baseFontSize = 14
 export const scaler = (() => {
     const pixelDensity = window.screen.width / window.devicePixelRatio
     const scaleFactor = resolutionArray.findIndex(value => value > pixelDensity)
-    return (
-        (scaleFactor > -1 ? scaleFactor : resolutionArray.length) * 0.125 + 0.75
-    )
+    return (scaleFactor > -1 ? scaleFactor : resolutionArray.length) * 0.125 + 0.75
 })()
